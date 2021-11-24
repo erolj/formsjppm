@@ -1,0 +1,7 @@
+{{ define "main" }}
+<ul>
+    {{ range where .Paginator.Pages ".Type" "==" "page" }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}
