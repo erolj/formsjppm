@@ -1,0 +1,83 @@
++++
+title = "Pendaftaran Baptisan Air"
+date = 2021-11-26T03:19:00+08:00
+type = "page"
+layout = "default"
+draft = false
++++
+
+<form class="row g-3" name="baptisan-air" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <div class="col-12 mb-3">
+        <label for="el-namalengkap" class="form-label">Nama Lengkap (sesuai Akta Lahir)</label>
+        <input type="text" class="form-control" id="el-namalengkap" placeholder="">
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-phone" class="form-label">Telp/HP</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="el-adphone">+62</span>
+            <input type="text" class="form-control" id="el-phone" aria-describedby="el-adphone">
+        </div>
+        <!-- <label for="el-phone" class="form-label">Telp/HP</label>
+        <input type="text" class="form-control" id="el-phone" placeholder="">     -->
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-whatsapp" class="form-label">WhatsApp</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="el-adwhatsapp">+62</span>
+            <input type="text" class="form-control" id="el-whatsapp" aria-describedby="el-adwhatsapp">
+        </div>
+        <!-- <label for="el-phone" class="form-label">Telp/HP</label>
+        <input type="text" class="form-control" id="el-whatsapp" placeholder="">     -->
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-tempatlahir" class="form-label">Tempat Lahir</label>
+        <input type="text" class="form-control" id="el-tempatlahir" placeholder="">
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-tgllahir" class="form-label">Tanggal Lahir</label>
+        <input type="date" class="form-control" name="tgllahir" id="el-tgllahir">
+    </div>
+    <div class="col-12 mb-3">
+        <label for="el-kelamin" class="form-label">Jenis Kelamin</label>
+        <select class="form-select" id="el-kelamin" aria-label="Pilih jenis kelamin">
+            <option selected>Pilih salah satu</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select>
+    </div>
+    <div class="col-12 mb-3">
+        <label for="el-alamat" class="form-label">Alamat</label>
+        <input type="text" class="form-control" id="el-alamat" placeholder="">
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-namabapak" class="form-label">Nama Ayah</label>
+        <input type="text" class="form-control" id="el-namabapak" placeholder="">    
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-namaibu" class="form-label">Nama Ibu</label>
+        <input type="text" class="form-control" id="el-namaibu" placeholder="">    
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-harilahir" class="form-label">Hari Baptis</label>
+        <input type="text" class="form-control" id="el-harilahir" placeholder="">
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-tglbaptis" class="form-label">Tanggal Baptis</label>
+        <input type="date" class="form-control" name="tglbaptis" id="el-tglbaptis">
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-baptisan" class="form-label">Keterangan Baptis</label>
+        <select class="form-select" id="el-baptisan" aria-label="Pilih status">
+            <option selected>Pilih salah satu</option>
+            <option value="Baptis Sendiri">Baptis Sendiri</option>
+            <option value="Baptis dengan Suami-Istri">Baptis dengan Suami/Istri</option>
+        </select>
+    </div>
+    <div class="col-6 mb-3">
+        <label for="el-namaikutbaptis" class="form-label">Nama Suami/Istri yang ikut baptis</label>
+        <input type="text" class="form-control" id="el-namaikutbaptis" placeholder="">    
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Kirim</button>
+    </div>
+</form>

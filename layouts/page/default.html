@@ -10,13 +10,13 @@
 </head>
 <body>
     <nav></nav>
-    <header>
+    <header class="container">
         <h1>{{ .Title }}</h1>
     </header>
-    <main>
+    <main class="container">
         {{ .Content }}
     </main>
-    <footer>
+    <footer class="container">
         {{ partial "footer" . }}
     </footer>
 </body>
