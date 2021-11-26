@@ -1,0 +1,46 @@
++++
+title = "Permohonan Cetak Kartu Keluarga Jemaat"
+date = 2021-11-26T15:17:29+08:00
+type = "page"
+layout = "default"
+draft = false
++++
+
+<form 
+    class="row g-3" 
+    action="/sukses" 
+    name="penyerahan-anak" 
+    method="POST" 
+    data-netlify="true" 
+    netlify-honeypot="bot-field" 
+    class="needs-validation" 
+    novalidate
+    >
+    <div class="hidden col-12">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <strong>NAJ</strong> atau <strong>Nomor Anggota Jemaat</strong> bisa diperoleh dari Sekretariat Jemaat.
+    </div>
+    <fieldset>
+        <legend>Data Isian</legend>
+        <div class="row">
+            <div class="form-floating col-12 mb-3">
+                <input type="text" class="form-control" name="naj-kepala-rohani" placeholder="naj-kepala-rohani" required />
+                <label for="naj-kepala-rohani" class="form-label">NAJ Kepala Rohani (11 digit)</label>
+            </div>
+            <div class="form-floating col-12 mb-3">
+                <input type="text" class="form-control" name="naj-istri" placeholder="naj-istri" />
+                <label for="naj-istri" class="form-label">NAJ Istri (11 digit) (jika Sudah Menikah)</label>
+            </div>
+            <div class="form-floating col-12 mb-3">
+                <input type="text" class="form-control" name="naj-anak" placeholder="naj-anak" />
+                <label for="naj-kepala-anak" class="form-label">NAJ Anak (11 digit) (kalau ada)</label>
+            </div>
+        </div>
+    </fieldset>
+    <hr />
+    <div class="col-12">
+        <button class="btn btn-primary btn-lg" type="submit">Kirim</button>
+    </div>
+</form>

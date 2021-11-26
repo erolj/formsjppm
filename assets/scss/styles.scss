@@ -5,6 +5,7 @@
 $body-bg: whitesmoke;
 $body-color: #111;
 $input-bg: white;
+$breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../../node_modules/bootstrap/scss/variables";
@@ -22,15 +23,64 @@ $input-bg: white;
 @import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/buttons";
 @import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/list-group";
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../../node_modules/bootstrap/scss/utilities/api";
 
 // 6. Add additional custom code here
+@font-face {
+    font-family: "RedHatDisplay";
+    src: url("/webfonts/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+}
+@font-face {
+    font-family: "RidleyGrotesk";
+    src: url("/webfonts/RidleyGrotesk-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "RidleyGrotesk Italic";
+    src: url("/webfonts/RidleyGrotesk-Italic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "RidleyGrotesk Bold";
+    src: url("/webfonts/RidleyGrotesk-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "RidleyGrotesk Bold Italic";
+    src: url("/webfonts/RidleyGrotesk-BoldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: bold;
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "RedHatDisplay", sans-serif;
+}
+h1 {
+    font-weight: 900;
+}
+legend, strong, b {
+    font-weight: bold;
 }
 .hidden {
     display: none;
+}
+.list-group-item {
+    a {
+        text-decoration: none !important;
+    }
+}
+.form-floating {
+    label {
+        left: inherit !important;
+    }
 }

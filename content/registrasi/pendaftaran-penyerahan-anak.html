@@ -19,68 +19,83 @@ draft = false
     <div class="hidden col-12">
         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
     </div>
-    <div class="form-floating col-12 mb-3">
-        <input type="text" class="form-control" name="nama-lengkap-anak" placeholder="nama-lengkap-anak" required />
-        <label for="nama-lengkap-anak" class="form-label">Nama Lengkap Anak (sesuai Akta Lahir)</label>
+    <div class="alert alert-info" role="alert">
+        <strong>NAJ</strong> atau <strong>Nomor Anggota Jemaat</strong> bisa diperoleh dari Sekretariat Jemaat.
     </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="text" class="form-control" name="tempat-lahir" placeholder="nama-lengkap-anak" required />
-        <label for="tempat-lahir" class="form-label">Tempat Lahir</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="date" class="form-control" name="tanggal-lahir" placeholder="tanggal-lahir" required />
-        <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
-    </div>
-    <div class="form-floating col-12 mb-3">
-        <select class="form-select" name="jenis-kelamin[]" aria-label="Pilih jenis kelamin" required>
-            <option selected>Pilih salah satu</option>
-            <option value="Laki-laki">Laki-laki</option>
-            <option value="Perempuan">Perempuan</option>
-        </select>
-        <label for="jenis-kelamin" class="form-label">Jenis Kelamin</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="text" class="form-control" name="nama-ayah" placeholder="nama-ayah" required />    
-        <label for="nama-ayah" class="form-label">Nama Ayah (sesuai Akta Lahir)</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="number" class="form-control" name="naj-ayah" placeholder="naj-ayah" minlength="11" />    
-        <label for="naj-ayah" class="form-label">NAJ Ayah (11 digit)</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="text" class="form-control" name="nama-ibu" placeholder="nama-ibu" required />    
-        <label for="nama-ibu" class="form-label">Nama Ibu (sesuai Akta Lahir)</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="number" class="form-control" name="naj-ibu" placeholder="naj-ibu" minlength="11" />    
-        <label for="naj-ibu" class="form-label">NAJ Ibu (11 digit)</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <select class="form-select" name="hari-penyerahan-anak[]" aria-label="Pilih hari penyerahan anak" required>
-            <option selected>Pilih salah satu</option>
-            <option value="Senin">Senin</option>
-            <option value="Selasa">Selasa</option>
-            <option value="Rabu">Rabu</option>
-            <option value="Kamis">Kamis</option>
-            <option value="Jumat">Jumat</option>
-            <option value="Sabtu">Sabtu</option>
-            <option value="Minggu">Minggu</option>
-        </select>
-        <label for="hari-penyerahan-anak" class="form-label">Hari Penyerahan Anak</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="date" class="form-control" name="tanggal-penyerahan-anak" placeholder="tanggal-penyerahan-anak" required />
-        <label for="tanggal-penyerahan-anak" class="form-label">Tanggal Penyerahan Anak</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="text" class="form-control" name="no-phone" placeholder="no-phone" required />
-        <label for="no-hp" class="form-label">No Telp/HP</label>
-    </div>
-    <div class="form-floating col-md-6 col-sm-12 mb-3">
-        <input type="text" class="form-control" name="whatsapp" placeholder="whatsapp" />
-        <label for="whatsapp" class="form-label">No WhatsApp</label>
-    </div>
+    <fieldset>
+        <legend>Data Anak</legend>
+        <div class="row">
+            <div class="form-floating col-12 mb-3">
+                <input type="text" class="form-control" name="nama-lengkap-anak" placeholder="nama-lengkap-anak" required />
+                <label for="nama-lengkap-anak" class="form-label">Nama Lengkap Anak (sesuai Akta Lahir)</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="text" class="form-control" name="tempat-lahir" placeholder="nama-lengkap-anak" required />
+                <label for="tempat-lahir" class="form-label">Tempat Lahir</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="date" class="form-control" name="tanggal-lahir" placeholder="tanggal-lahir" required />
+                <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
+            </div>
+            <div class="form-floating col-12 mb-3">
+                <select class="form-select" name="jenis-kelamin[]" aria-label="Pilih jenis kelamin" required>
+                    <option selected>Pilih salah satu</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+                <label for="jenis-kelamin" class="form-label">Jenis Kelamin</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="text" class="form-control" name="nama-ayah" placeholder="nama-ayah" required />    
+                <label for="nama-ayah" class="form-label">Nama Ayah (sesuai Akta Lahir)</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="number" class="form-control" name="naj-ayah" placeholder="naj-ayah" minlength="11" />    
+                <label for="naj-ayah" class="form-label">NAJ Ayah (11 digit)</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="text" class="form-control" name="nama-ibu" placeholder="nama-ibu" required />    
+                <label for="nama-ibu" class="form-label">Nama Ibu (sesuai Akta Lahir)</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="number" class="form-control" name="naj-ibu" placeholder="naj-ibu" minlength="11" />    
+                <label for="naj-ibu" class="form-label">NAJ Ibu (11 digit)</label>
+            </div>
+        </div>
+    </fieldset>
+    <hr />
+    <fieldset>
+        <legend>Data Penyerahan Anak</legend>
+        <div class="row">
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <select class="form-select" name="hari-penyerahan-anak[]" aria-label="Pilih hari penyerahan anak" required>
+                    <option selected>Pilih salah satu</option>
+                    <option value="Senin">Senin</option>
+                    <option value="Selasa">Selasa</option>
+                    <option value="Rabu">Rabu</option>
+                    <option value="Kamis">Kamis</option>
+                    <option value="Jumat">Jumat</option>
+                    <option value="Sabtu">Sabtu</option>
+                    <option value="Minggu">Minggu</option>
+                </select>
+                <label for="hari-penyerahan-anak" class="form-label">Hari Penyerahan Anak</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="date" class="form-control" name="tanggal-penyerahan-anak" placeholder="tanggal-penyerahan-anak" required />
+                <label for="tanggal-penyerahan-anak" class="form-label">Tanggal Penyerahan Anak</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="text" class="form-control" name="no-phone" placeholder="no-phone" required />
+                <label for="no-hp" class="form-label">No Telp/HP</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="text" class="form-control" name="whatsapp" placeholder="whatsapp" />
+                <label for="whatsapp" class="form-label">No WhatsApp</label>
+            </div>
+        </div>
+    </fieldset>
+    <hr />
     <div class="col-12">
-        <button class="btn btn-primary" type="submit">Kirim</button>
+        <button class="btn btn-primary btn-lg" type="submit">Kirim</button>
     </div>
 </form>

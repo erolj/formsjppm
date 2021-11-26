@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Params.languageCode }}">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ $stylesheet := resources.Get "scss/styles.scss" | toCSS | minify | fingerprint "sha512" }}
-    <link rel="stylesheet" href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}">
+    {{ partial "headtag" . }}
     <title>{{ .Title }} - {{ .Site.Title }}</title>
 </head>
 <body>
-    <nav></nav>
-    <header class="container">
-        <h1>{{ .Title }}</h1>
+    <header class="bg-primary bg-gradient py-5">
+        <div class="container">
+            <h1 class="text-light">{{ .Title }}</h1>
+        </div>
     </header>
-    <main class="container">
-        {{ .Content }}
+    <main class="py-5">
+        <div class="container">
+            <nav class="trails mb-4" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" aria-current="page"><a href="/">Awal</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+                </ol>
+            </nav>
+            {{ .Content }}
+        </div>
     </main>
-    <footer class="container">
-        {{ partial "footer" . }}
+    <footer class="pt-3 pb-5">
+        <div class="container">
+            {{ partial "footer" . }}
+        </div>
     </footer>
 </body>
 </html>

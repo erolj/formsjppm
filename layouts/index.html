@@ -1,7 +1,11 @@
 {{ define "main" }}
-<ul>
-    {{ range where .Paginator.Pages ".Layout" "==" "default" }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    {{ end }}
-</ul>
+<div class="card">
+  <ul class="list-group list-group-flush">
+      {{ range where .Paginator.Pages ".Layout" "==" "default" }}
+      <li class="list-group-item position-relative">
+        <a class="stretched-link" href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+  </ul>
+</div>
 {{ end }}
