@@ -7,9 +7,12 @@ draft = false
 +++
 
 <form class="row g-3" name="baptisan-air" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <div class="hidden col-12">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    </div>
     <div class="col-12 mb-3">
         <label for="el-namalengkap" class="form-label">Nama Lengkap (sesuai Akta Lahir)</label>
-        <input type="text" class="form-control" id="el-namalengkap" placeholder="">
+        <input type="text" class="form-control" id="el-namalengkap">
     </div>
     <div class="col-6 mb-3">
         <label for="el-phone" class="form-label">Telp/HP</label>
@@ -18,7 +21,7 @@ draft = false
             <input type="text" class="form-control" id="el-phone" aria-describedby="el-adphone">
         </div>
         <!-- <label for="el-phone" class="form-label">Telp/HP</label>
-        <input type="text" class="form-control" id="el-phone" placeholder="">     -->
+        <input type="text" class="form-control" id="el-phone">     -->
     </div>
     <div class="col-6 mb-3">
         <label for="el-whatsapp" class="form-label">WhatsApp</label>
@@ -27,11 +30,11 @@ draft = false
             <input type="text" class="form-control" id="el-whatsapp" aria-describedby="el-adwhatsapp">
         </div>
         <!-- <label for="el-phone" class="form-label">Telp/HP</label>
-        <input type="text" class="form-control" id="el-whatsapp" placeholder="">     -->
+        <input type="text" class="form-control" id="el-whatsapp">     -->
     </div>
     <div class="col-6 mb-3">
         <label for="el-tempatlahir" class="form-label">Tempat Lahir</label>
-        <input type="text" class="form-control" id="el-tempatlahir" placeholder="">
+        <input type="text" class="form-control" id="el-tempatlahir">
     </div>
     <div class="col-6 mb-3">
         <label for="el-tgllahir" class="form-label">Tanggal Lahir</label>
@@ -47,19 +50,19 @@ draft = false
     </div>
     <div class="col-12 mb-3">
         <label for="el-alamat" class="form-label">Alamat</label>
-        <input type="text" class="form-control" id="el-alamat" placeholder="">
+        <input type="text" class="form-control" id="el-alamat">
     </div>
     <div class="col-6 mb-3">
         <label for="el-namabapak" class="form-label">Nama Ayah</label>
-        <input type="text" class="form-control" id="el-namabapak" placeholder="">    
+        <input type="text" class="form-control" id="el-namabapak">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-namaibu" class="form-label">Nama Ibu</label>
-        <input type="text" class="form-control" id="el-namaibu" placeholder="">    
+        <input type="text" class="form-control" id="el-namaibu">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-harilahir" class="form-label">Hari Baptis</label>
-        <input type="text" class="form-control" id="el-harilahir" placeholder="">
+        <input type="text" class="form-control" id="el-harilahir">
     </div>
     <div class="col-6 mb-3">
         <label for="el-tglbaptis" class="form-label">Tanggal Baptis</label>
@@ -75,7 +78,7 @@ draft = false
     </div>
     <div class="col-6 mb-3">
         <label for="el-namaikutbaptis" class="form-label">Nama Suami/Istri yang ikut baptis</label>
-        <input type="text" class="form-control" id="el-namaikutbaptis" placeholder="">    
+        <input type="text" class="form-control" id="el-namaikutbaptis">    
     </div>
     <div class="col-12">
         <button class="btn btn-primary" type="submit">Kirim</button>

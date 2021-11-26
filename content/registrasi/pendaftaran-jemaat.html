@@ -7,17 +7,20 @@ draft = false
 +++
 
 <form class="row g-3" name="pendaftaran-jemaat" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <div class="hidden col-12">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    </div>
     <div class="col-12 mb-3">
         <label for="el-namalengkap" class="form-label">Nama Lengkap</label>
-        <input type="text" class="form-control" id="el-namalengkap" placeholder="">
+        <input type="text" class="form-control" id="el-namalengkap">
     </div>
     <div class="col-6 mb-3">
         <label for="el-namapanggilan" class="form-label">Nama Panggilan</label>
-        <input type="text" class="form-control" id="el-namapanggilan" placeholder="">
+        <input type="text" class="form-control" id="el-namapanggilan">
     </div>
     <div class="col-6 mb-3">
         <label for="el-namabaptis" class="form-label">Nama Baptis (jika ada)</label>
-        <input type="text" class="form-control" id="el-namabaptis" placeholder="">
+        <input type="text" class="form-control" id="el-namabaptis">
     </div>
     <div class="col-12 mb-3">
         <label for="el-tglgabung" class="form-label">Tanggal Bergabung</label>
@@ -25,11 +28,11 @@ draft = false
     </div>
     <div class="col-12 mb-3">
         <label for="el-ktp" class="form-label">No KTP</label>
-        <input type="text" class="form-control" id="el-ktp" placeholder="">
+        <input type="text" class="form-control" id="el-ktp">
     </div>
     <div class="col-6 mb-3">
         <label for="el-tempatlahir" class="form-label">Tempat Lahir</label>
-        <input type="text" class="form-control" id="el-tempatlahir" placeholder="">
+        <input type="text" class="form-control" id="el-tempatlahir">
     </div>
     <div class="col-6 mb-3">
         <label for="el-tgllahir" class="form-label">Tanggal Lahir</label>
@@ -63,43 +66,43 @@ draft = false
     </div>
     <div class="col-12 mb-3">
         <label for="el-namapasangan" class="form-label">Nama Lengkap Pasangan (jika sudah Menikah)</label>
-        <input type="text" class="form-control" id="el-namapasangan" placeholder="">
+        <input type="text" class="form-control" id="el-namapasangan">
     </div>
     <div class="col-12 mb-3">
         <label for="el-alamat" class="form-label">Alamat</label>
-        <input type="text" class="form-control" id="el-alamat" placeholder="">
+        <input type="text" class="form-control" id="el-alamat">
     </div>
     <div class="col-6 mb-3">
         <label for="el-rt" class="form-label">RT</label>
-        <input type="text" class="form-control" id="el-rt" placeholder="">    
+        <input type="text" class="form-control" id="el-rt">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-rw" class="form-label">RW</label>
-        <input type="text" class="form-control" id="el-rw" placeholder="">    
+        <input type="text" class="form-control" id="el-rw">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-kelurahan" class="form-label">Kelurahan</label>
-        <input type="text" class="form-control" id="el-kelurahan" placeholder="">    
+        <input type="text" class="form-control" id="el-kelurahan">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-kecamatan" class="form-label">Kecamatan</label>
-        <input type="text" class="form-control" id="el-kecamatan" placeholder="">    
+        <input type="text" class="form-control" id="el-kecamatan">    
     </div>
     <div class="col-10 mb-3">
         <label for="el-kotakab" class="form-label">Kota/Kabupaten</label>
-        <input type="text" class="form-control" id="el-kotakab" placeholder="">
+        <input type="text" class="form-control" id="el-kotakab">
     </div>            
     <div class="col-2 mb-3">
         <label for="el-kodepos" class="form-label">Kode Pos</label>
-        <input type="number" class="form-control" id="el-kodepos" placeholder="">
+        <input type="number" class="form-control" id="el-kodepos">
     </div>            
     <div class="col-6 mb-3">
         <label for="el-provinsi" class="form-label">Provinsi</label>
-        <input type="text" class="form-control" id="el-provinsi" placeholder="">    
+        <input type="text" class="form-control" id="el-provinsi">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-negara" class="form-label">Negara</label>
-        <input type="text" class="form-control" id="el-negara" placeholder="">    
+        <input type="text" class="form-control" id="el-negara">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-phone" class="form-label">Telp/HP</label>
@@ -108,7 +111,7 @@ draft = false
             <input type="text" class="form-control" id="el-phone" aria-describedby="el-adphone">
         </div>
         <!-- <label for="el-phone" class="form-label">Telp/HP</label>
-        <input type="text" class="form-control" id="el-phone" placeholder="">     -->
+        <input type="text" class="form-control" id="el-phone">     -->
     </div>
     <div class="col-6 mb-3">
         <label for="el-whatsapp" class="form-label">WhatsApp</label>
@@ -117,23 +120,23 @@ draft = false
             <input type="text" class="form-control" id="el-whatsapp" aria-describedby="el-adwhatsapp">
         </div>
         <!-- <label for="el-phone" class="form-label">Telp/HP</label>
-        <input type="text" class="form-control" id="el-whatsapp" placeholder="">     -->
+        <input type="text" class="form-control" id="el-whatsapp">     -->
     </div>
     <div class="col-12 mb-3">
         <label for="el-email" class="form-label">Email</label>
-        <input type="text" class="form-control" id="el-email" placeholder="">    
+        <input type="text" class="form-control" id="el-email">    
     </div>
     <div class="col-12 mb-3">
         <label for="el-pekerjaan" class="form-label">Pekerjaan</label>
-        <input type="text" class="form-control" id="el-pekerjaan" placeholder="">    
+        <input type="text" class="form-control" id="el-pekerjaan">    
     </div>
     <div class="col-12 mb-3">
         <label for="el-pendidikan" class="form-label">Pendidikan Terakhir</label>
-        <input type="text" class="form-control" id="el-pendidikan" placeholder="">    
+        <input type="text" class="form-control" id="el-pendidikan">    
     </div>
     <div class="col-12 mb-3">
         <label for="el-ketrampilan" class="form-label">Ketrampilan</label>
-        <input type="text" class="form-control" id="el-ketrampilan" placeholder="">    
+        <input type="text" class="form-control" id="el-ketrampilan">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-baptisan" class="form-label">Baptis Selam</label>
