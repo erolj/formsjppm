@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Params.languageCode }}">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) }}
-    {{ $stylesheet := resources.Get "scss/styles.scss" | toCSS $options | minify | fingerprint "sha512" }}
-    <link rel="stylesheet" href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}">
+    {{ partial "headtag" . }}
     <title>{{ .Title }}</title>
 </head>
 <body>
-    <nav></nav>
-    <header>
-        <h1>{{ .Title }}</h1>
+    <header class="py-5">
+        <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+            <figure class="logo">
+                {{ $logo := resources.Get "/img/logo-gbi.png" }}
+                <img src="{{ $logo.Permalink }}" alt="Logo">
+            </figure>
+            <h1 class="text-light">{{ .Title }}</h1>
+        </div>
     </header>
-    <main>
-        {{ block "main" . }}
-        {{ end }}
+    <main class="py-5">
+        <div class="container">
+            {{ block "main" . }}
+            {{ end }}
+        </div>
     </main>
-    <footer>
-        {{ partial "footer" . }}
+    <footer class="pt-3 pb-5">
+        <div class="container d-flex flex-column justify-content-center text-center">
+            {{ partial "footer" . }}
+        </div>
     </footer>
 </body>
 </html>
