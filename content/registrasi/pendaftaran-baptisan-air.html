@@ -12,37 +12,33 @@ draft = false
     </div>
     <div class="col-12 mb-3">
         <label for="el-namalengkap" class="form-label">Nama Lengkap (sesuai Akta Lahir)</label>
-        <input type="text" class="form-control" id="el-namalengkap">
+        <input type="text" class="form-control" name="el-namalengkap">
     </div>
     <div class="col-6 mb-3">
         <label for="el-phone" class="form-label">Telp/HP</label>
         <div class="input-group mb-3">
             <span class="input-group-text" id="el-adphone">+62</span>
-            <input type="text" class="form-control" id="el-phone" aria-describedby="el-adphone">
+            <input type="text" class="form-control" name="el-phone" aria-describedby="el-adphone">
         </div>
-        <!-- <label for="el-phone" class="form-label">Telp/HP</label>
-        <input type="text" class="form-control" id="el-phone">     -->
     </div>
     <div class="col-6 mb-3">
         <label for="el-whatsapp" class="form-label">WhatsApp</label>
         <div class="input-group mb-3">
             <span class="input-group-text" id="el-adwhatsapp">+62</span>
-            <input type="text" class="form-control" id="el-whatsapp" aria-describedby="el-adwhatsapp">
+            <input type="text" class="form-control" name="el-whatsapp" aria-describedby="el-adwhatsapp">
         </div>
-        <!-- <label for="el-phone" class="form-label">Telp/HP</label>
-        <input type="text" class="form-control" id="el-whatsapp">     -->
     </div>
     <div class="col-6 mb-3">
         <label for="el-tempatlahir" class="form-label">Tempat Lahir</label>
-        <input type="text" class="form-control" id="el-tempatlahir">
+        <input type="text" class="form-control" name="el-tempatlahir">
     </div>
     <div class="col-6 mb-3">
         <label for="el-tgllahir" class="form-label">Tanggal Lahir</label>
-        <input type="date" class="form-control" name="tgllahir" id="el-tgllahir">
+        <input type="date" class="form-control" name="el-tgllahir">
     </div>
     <div class="col-12 mb-3">
         <label for="el-kelamin" class="form-label">Jenis Kelamin</label>
-        <select class="form-select" id="el-kelamin" aria-label="Pilih jenis kelamin">
+        <select class="form-select" name="el-kelamin[]" aria-label="Pilih jenis kelamin">
             <option selected>Pilih salah satu</option>
             <option value="Laki-laki">Laki-laki</option>
             <option value="Perempuan">Perempuan</option>
@@ -50,27 +46,27 @@ draft = false
     </div>
     <div class="col-12 mb-3">
         <label for="el-alamat" class="form-label">Alamat</label>
-        <input type="text" class="form-control" id="el-alamat">
+        <input type="text" class="form-control" name="el-alamat">
     </div>
     <div class="col-6 mb-3">
         <label for="el-namabapak" class="form-label">Nama Ayah</label>
-        <input type="text" class="form-control" id="el-namabapak">    
+        <input type="text" class="form-control" name="el-namabapak">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-namaibu" class="form-label">Nama Ibu</label>
-        <input type="text" class="form-control" id="el-namaibu">    
+        <input type="text" class="form-control" name="el-namaibu">    
     </div>
     <div class="col-6 mb-3">
         <label for="el-harilahir" class="form-label">Hari Baptis</label>
-        <input type="text" class="form-control" id="el-harilahir">
+        <input type="text" class="form-control" name="el-harilahir">
     </div>
     <div class="col-6 mb-3">
         <label for="el-tglbaptis" class="form-label">Tanggal Baptis</label>
-        <input type="date" class="form-control" name="tglbaptis" id="el-tglbaptis">
+        <input type="date" class="form-control" name="el-tglbaptis">
     </div>
     <div class="col-6 mb-3">
         <label for="el-baptisan" class="form-label">Keterangan Baptis</label>
-        <select class="form-select" id="el-baptisan" aria-label="Pilih status">
+        <select class="form-select" name="el-baptisan[]" aria-label="Pilih status">
             <option selected>Pilih salah satu</option>
             <option value="Baptis Sendiri">Baptis Sendiri</option>
             <option value="Baptis dengan Suami-Istri">Baptis dengan Suami/Istri</option>
@@ -78,7 +74,7 @@ draft = false
     </div>
     <div class="col-6 mb-3">
         <label for="el-namaikutbaptis" class="form-label">Nama Suami/Istri yang ikut baptis</label>
-        <input type="text" class="form-control" id="el-namaikutbaptis">    
+        <input type="text" class="form-control" name="el-namaikutbaptis">    
     </div>
     <div class="col-12">
         <button class="btn btn-primary" type="submit">Kirim</button>
