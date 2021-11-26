@@ -7,9 +7,9 @@
 <body>
     <header class="py-5">
         <div class="container d-flex flex-column justify-content-center align-items-center text-center">
-            <figure>
+            <figure class="logo">
                 {{ $logo := resources.Get "/img/logo-gbi.png" }}
-                <img class="logo" src="{{ $logo.Permalink }}" alt="Logo">
+                <img src="{{ $logo.Permalink }}" alt="Logo">
             </figure>
             <h1 class="text-light">{{ .Title }}</h1>
         </div>
