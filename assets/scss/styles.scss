@@ -65,14 +65,26 @@ $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200
 body {
     font-family: "RedHatDisplay", sans-serif;
 }
+header {
+    background-image: linear-gradient(to right top,#031c70,#103191,#1747b3,#185fd6,#0f78fb);
+    min-height: 25vh;
+}
 h1 {
     font-weight: 900;
 }
 legend, strong, b {
     font-weight: bold;
 }
+footer {
+    .copyright {
+        font-size: small;
+    }
+}
 .hidden {
     display: none;
+}
+.logo {
+    height: 5em;
 }
 .list-group-item {
     a {
@@ -82,5 +94,9 @@ legend, strong, b {
 .form-floating {
     label {
         left: inherit !important;
+        font-size: 0.875rem;
     }
+}
+.trails {
+    font-size: small;
 }
