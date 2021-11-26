@@ -3,7 +3,7 @@
   <ul class="list-group list-group-flush">
       {{ range where .Paginator.Pages ".Layout" "==" "default" }}
       <li class="list-group-item position-relative">
-        <a class="stretched-link" href="{{ .Permalink }}">{{ .Title }}</a>
+        <a class="stretched-link text-decoration-none" href="{{ .Permalink }}">{{ .Title }}</a>
       </li>
       {{ end }}
   </ul>
