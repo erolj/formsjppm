@@ -19,115 +19,112 @@ draft = false
     <div class="hidden col-12">
         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="tempat-pemberkatan" placeholder="tempat-pemberkatan" value="GBI Pusat Perakitan" />
         <label for="tempat-pemberkatan" class="form-label">Tempat Pemberkatan Nikah</label>
-        <input type="text" class="form-control" name="tempat-pemberkatan" value="GBI Pusat Perakitan" readonly />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <select class="form-select" name="hari-pemberkatan[]" aria-label="Pilih hari pemberkatan nikah" required>
+            <option selected>Pilih salah satu</option>
+            <option value="Senin">Senin</option>
+            <option value="Selasa">Selasa</option>
+            <option value="Rabu">Rabu</option>
+            <option value="Kamis">Kamis</option>
+            <option value="Jumat">Jumat</option>
+            <option value="Sabtu">Sabtu</option>
+            <option value="Minggu">Minggu</option>
+        </select>
         <label for="hari-pemberkatan" class="form-label">Hari Pemberkatan Nikah</label>
-        <input type="text" class="form-control" name="hari-pemberkatan" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="datetime-local" class="form-control" name="tanggal-pemberkatan" placeholder="tanggal-pemberkatan" required />
         <label for="tanggal-pemberkatan" class="form-label">Tanggal Pemberkatan Nikah</label>
-        <input type="datetime-local" class="form-control" name="tanggal-pemberkatan" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="kota-pemberkatan" placeholder="kota-pemberkatan" value="Manado" required />
         <label for="kota-pemberkatan" class="form-label">Kota Pemberkatan Nikah</label>
-        <input type="text" class="form-control" name="kota-pemberkatan" required />
     </div>
     <hr />
-    <div class="col-12 mb-3">
+    <div class="form-floating col-12 mb-3">
+        <input type="text" class="form-control" name="nama-lengkap-mempelai-pria" placeholder="nama-lengkap-mempelai-pria" required />
         <label for="nama-lengkap-mempelai-pria" class="form-label">Nama Lengkap Mempelai Pria</label>
-        <input type="text" class="form-control" name="nama-lengkap-mempelai-pria" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="tempat-lahir-mempelai-pria" placeholder="tempat-lahir-mempelai-pria" required />
         <label for="tempat-lahir-mempelai-pria" class="form-label">Tempat Lahir Mempelai Pria</label>
-        <input type="text" class="form-control" name="tempat-lahir-mempelai-pria" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="date" class="form-control" name="tanggal-lahir-mempelai-pria" placeholder="tanggal-lahir-mempelai-pria" required />
         <label for="tanggal-lahir-mempelai-pria" class="form-label">Tanggal Lahir Mempelai Pria</label>
-        <input type="date" class="form-control" name="tanggal-lahir-mempelai-pria" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="tempat-baptis-mempelai-pria" placeholder="tempat-baptis-mempelai-pria" required />
         <label for="tempat-baptis-mempelai-pria" class="form-label">Tempat Baptis Mempelai Pria (Nama Gereja)</label>
-        <input type="text" class="form-control" name="tempat-baptis-mempelai-pria" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="date" class="form-control" name="tanggal-baptis-mempelai-pria" placeholder="tanggal-baptis-mempelai-pria" required />
         <label for="tanggal-baptis-mempelai-pria" class="form-label">Tanggal Baptis Mempelai Pria</label>
-        <input type="date" class="form-control" name="tanggal-baptis-mempelai-pria" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="no-hp-mempelai-pria" placeholder="no-hp-mempelai-pria" required />
         <label for="no-hp-mempelai-pria" class="form-label">Telp/HP Mempelai Pria</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="el-adphonepria">+62</span>
-            <input type="text" class="form-control" name="no-hp-mempelai-pria" aria-describedby="el-adphonepria" required />
-        </div>
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="whatsapp-mempelai-pria" placeholder="whatsapp-mempelai-pria" />
         <label for="whatsapp-mempelai-pria" class="form-label">WhatsApp Mempelai Pria</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="el-adwhatsapppria">+62</span>
-            <input type="text" class="form-control" name="whatsapp-mempelai-pria" aria-describedby="el-adwhatsapppria" />
-        </div>
     </div>
-    <div class="col-12 mb-3">
+    <div class="form-floating col-12 mb-3">
+        <input type="text" class="form-control" name="alamat-mempelai-pria" placeholder="alamat-mempelai-pria" required />
         <label for="alamat-mempelai-pria" class="form-label">Alamat Mempelai Pria</label>
-        <input type="text" class="form-control" name="alamat-mempelai-pria" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="nama-ayah-mempelai-pria" placeholder="nama-ayah-mempelai-pria" />
         <label for="nama-ayah-mempelai-pria" class="form-label">Nama Ayah Mempelai Pria</label>
-        <input type="text" class="form-control" name="nama-ayah-mempelai-pria" />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="nama-ibu-mempelai-pria" placeholder="nama-ibu-mempelai-pria" />
         <label for="nama-ibu-mempelai-pria" class="form-label">Nama Ibu Mempelai Pria</label>
-        <input type="text" class="form-control" name="nama-ibu-mempelai-pria" />
     </div>
     <hr />
-    <div class="col-12 mb-3">
+    <div class="form-floating col-12 mb-3">
+        <input type="text" class="form-control" name="nama-lengkap-mempelai-perempuan" placeholder="nama-lengkap-mempelai-perempuan" required />
         <label for="nama-lengkap-mempelai-perempuan" class="form-label">Nama Lengkap Mempelai Perempuan</label>
-        <input type="text" class="form-control" name="nama-lengkap-mempelai-perempuan" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="tempat-lahir-mempelai-perempuan" placeholder="tempat-lahir-mempelai-perempuan" required />
         <label for="tempat-lahir-mempelai-perempuan" class="form-label">Tempat Lahir Mempelai Perempuan</label>
-        <input type="text" class="form-control" name="tempat-lahir-mempelai-perempuan" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="date" class="form-control" name="tanggal-lahir-mempelai-perempuan" placeholder="tanggal-lahir-mempelai-perempuan" required />
         <label for="tanggal-lahir-mempelai-perempuan" class="form-label">Tanggal Lahir Mempelai Perempuan</label>
-        <input type="date" class="form-control" name="tanggal-lahir-mempelai-perempuan" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="tempat-baptis-mempelai-perempuan" placeholder="tempat-baptis-mempelai-perempuan" required />
         <label for="tempat-baptis-mempelai-perempuan" class="form-label">Tempat Baptis Mempelai Perempuan (Nama Gereja)</label>
-        <input type="text" class="form-control" name="tempat-baptis-mempelai-perempuan" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="date" class="form-control" name="tanggal-baptis-mempelai-perempuan" placeholder="tanggal-baptis-mempelai-perempuan" required />
         <label for="tanggal-baptis-mempelai-perempuan" class="form-label">Tanggal Baptis Mempelai Perempuan</label>
-        <input type="date" class="form-control" name="tanggal-baptis-mempelai-perempuan" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="no-hp-mempelai-perempuan" placeholder="no-hp-mempelai-perempuan" required />
         <label for="no-hp-mempelai-perempuan" class="form-label">Telp/HP Mempelai Perempuan</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="el-adphoneperempuan">+62</span>
-            <input type="text" class="form-control" name="no-hp-mempelai-perempuan" aria-describedby="el-adphoneperempuan" required />
-        </div>
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="whatsapp-mempelai-perempuan" placeholder="whatsapp-mempelai-perempuan" />
         <label for="whatsapp-mempelai-perempuan" class="form-label">WhatsApp Mempelai Perempuan</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="el-adwhatsappperempuan">+62</span>
-            <input type="text" class="form-control" name="whatsapp-mempelai-perempuan" aria-describedby="el-adwhatsappperempuan" />
-        </div>
     </div>
-    <div class="col-12 mb-3">
+    <div class="form-floating col-12 mb-3">
+        <input type="text" class="form-control" name="alamat-mempelai-perempuan" placeholder="alamat-mempelai-perempuan" required />
         <label for="alamat-mempelai-perempuan" class="form-label">Alamat Mempelai perempuan</label>
-        <input type="text" class="form-control" name="alamat-mempelai-perempuan" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="nama-ayah-mempelai-perempuan" placeholder="nama-ayah-mempelai-perempuan" />
         <label for="nama-ayah-mempelai-perempuan" class="form-label">Nama Ayah Mempelai Perempuan</label>
-        <input type="text" class="form-control" name="nama-ayah-mempelai-perempuan" />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="nama-ibu-mempelai-perempuan" placeholder="nama-ibu-mempelai-perempuan" />
         <label for="nama-ibu-mempelai-perempuan" class="form-label">Nama Ibu Mempelai Perempuan</label>
-        <input type="text" class="form-control" name="nama-ibu-mempelai-perempuan" />
     </div>
     <div class="col-12">
         <button class="btn btn-primary" type="submit">Kirim</button>

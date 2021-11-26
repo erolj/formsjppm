@@ -19,71 +19,74 @@ draft = false
     <div class="hidden col-12">
         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
     </div>
-    <div class="col-12 mb-3">
+    <div class="form-floating col-12 mb-3">
+        <input type="text" class="form-control" name="nama-lengkap" placeholder="nama-lengkap" required />
         <label for="nama-lengkap" class="form-label">Nama Lengkap (sesuai Akta Lahir)</label>
-        <input type="text" class="form-control" name="nama-lengkap" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="no-hp" placeholder="no-hp" required />
         <label for="no-hp" class="form-label">Telp/HP</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="el-adphone">+62</span>
-            <input type="text" class="form-control" name="no-hp" aria-describedby="el-adphone" required />
-        </div>
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="whatsapp" placeholder="whatsapp" />
         <label for="whatsapp" class="form-label">WhatsApp</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="el-adwhatsapp">+62</span>
-            <input type="text" class="form-control" name="whatsapp" aria-describedby="el-adwhatsapp" />
-        </div>
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="tempat-lahir" placeholder="tempat-lahir" required />
         <label for="tempat-lahir" class="form-label">Tempat Lahir</label>
-        <input type="text" class="form-control" name="tempat-lahir" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="date" class="form-control" name="tanggal-lahir" placeholder="tanggal-lahir" required />
         <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
-        <input type="date" class="form-control" name="tanggal-lahir" required />
     </div>
-    <div class="col-12 mb-3">
-        <label for="jenis-kelamin" class="form-label">Jenis Kelamin</label>
+    <div class="form-floating col-12 mb-3">
         <select class="form-select" name="jenis-kelamin[]" aria-label="Pilih jenis kelamin" required>
             <option selected>Pilih salah satu</option>
             <option value="Laki-laki">Laki-laki</option>
             <option value="Perempuan">Perempuan</option>
         </select>
+        <label for="jenis-kelamin" class="form-label">Jenis Kelamin</label>
     </div>
-    <div class="col-12 mb-3">
+    <div class="form-floating col-12 mb-3">
+        <input type="text" class="form-control" name="alamat" placeholder="alamat" required />
         <label for="alamat" class="form-label">Alamat</label>
-        <input type="text" class="form-control" name="alamat" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="nama-ayah" placeholder="nama-ayah" required />    
         <label for="nama-ayah" class="form-label">Nama Ayah</label>
-        <input type="text" class="form-control" name="nama-ayah" required />    
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="nama-ibu" placeholder="nama-ibu" required />    
         <label for="nama-ibu" class="form-label">Nama Ibu</label>
-        <input type="text" class="form-control" name="nama-ibu" required />    
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <select class="form-select" name="hari-baptis[]" aria-label="Pilih hari baptisan" required>
+            <option selected>Pilih salah satu</option>
+            <option value="Senin">Senin</option>
+            <option value="Selasa">Selasa</option>
+            <option value="Rabu">Rabu</option>
+            <option value="Kamis">Kamis</option>
+            <option value="Jumat">Jumat</option>
+            <option value="Sabtu">Sabtu</option>
+            <option value="Minggu">Minggu</option>
+        </select>
         <label for="hari-baptis" class="form-label">Hari Baptis</label>
-        <input type="text" class="form-control" name="hari-baptis" required />
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="date" class="form-control" name="tanggal-baptis" placeholder="tanggal-baptis" required />
         <label for="tanggal-baptis" class="form-label">Tanggal Baptis</label>
-        <input type="date" class="form-control" name="tanggal-baptis" required />
     </div>
-    <div class="col-6 mb-3">
-        <label for="keterangan-baptisan" class="form-label">Keterangan Baptis</label>
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
         <select class="form-select" name="keterangan-baptisan[]" aria-label="Pilih status" required>
             <option selected>Pilih salah satu</option>
             <option value="Baptis Sendiri">Baptis Sendiri</option>
             <option value="Baptis dengan Suami-Istri">Baptis dengan Suami/Istri</option>
         </select>
+        <label for="keterangan-baptisan" class="form-label">Keterangan Baptis</label>
     </div>
-    <div class="col-6 mb-3">
+    <div class="form-floating col-md-6 col-sm-12 mb-3">
+        <input type="text" class="form-control" name="nama-yang-ikut-baptis" placeholder="nama-yang-ikut-baptis" />    
         <label for="nama-yang-ikut-baptis" class="form-label">Nama Suami/Istri yang ikut baptis</label>
-        <input type="text" class="form-control" name="nama-yang-ikut-baptis" />    
     </div>
     <div class="col-12">
         <button class="btn btn-primary" type="submit">Kirim</button>
