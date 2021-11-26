@@ -6,49 +6,58 @@ layout = "default"
 draft = false
 +++
 
-<form class="row g-3" name="pendaftaran-jemaat" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form 
+    class="row g-3" 
+    action="/sukses" 
+    name="pendaftaran-jemaat" 
+    method="POST" 
+    data-netlify="true" 
+    netlify-honeypot="bot-field" 
+    class="needs-validation" 
+    novalidate
+    >
     <div class="hidden col-12">
         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
     </div>
     <div class="col-12 mb-3">
-        <label for="el-namalengkap" class="form-label">Nama Lengkap</label>
-        <input type="text" class="form-control" name="el-namalengkap">
+        <label for="nama-lengkap" class="form-label">Nama Lengkap</label>
+        <input type="text" class="form-control" name="nama-lengkap" required />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-namapanggilan" class="form-label">Nama Panggilan</label>
-        <input type="text" class="form-control" name="el-namapanggilan">
+        <label for="nama-panggilan" class="form-label">Nama Panggilan</label>
+        <input type="text" class="form-control" name="nama-panggilan" />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-namabaptis" class="form-label">Nama Baptis (jika ada)</label>
-        <input type="text" class="form-control" name="el-namabaptis">
+        <label for="nama-baptis" class="form-label">Nama Baptis (jika ada)</label>
+        <input type="text" class="form-control" name="nama-baptis" />
     </div>
     <div class="col-12 mb-3">
-        <label for="el-tglgabung" class="form-label">Tanggal Bergabung</label>
-        <input type="date" class="form-control" name="el-tglgabung">
+        <label for="tanggal-bergabung" class="form-label">Tanggal Bergabung</label>
+        <input type="date" class="form-control" name="tanggal-bergabung" required />
     </div>
     <div class="col-12 mb-3">
-        <label for="el-ktp" class="form-label">No KTP</label>
-        <input type="text" class="form-control" name="el-ktp">
+        <label for="no-ktp" class="form-label">No KTP</label>
+        <input type="text" class="form-control" name="no-ktp" required />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-tempatlahir" class="form-label">Tempat Lahir</label>
-        <input type="text" class="form-control" name="el-tempatlahir">
+        <label for="tempat-lahir" class="form-label">Tempat Lahir</label>
+        <input type="text" class="form-control" name="tempat-lahir" required />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-tgllahir" class="form-label">Tanggal Lahir</label>
-        <input type="date" class="form-control" name="el-tgllahir">
+        <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
+        <input type="date" class="form-control" name="tanggal-lahir" required />
     </div>
     <div class="col-12 mb-3">
-        <label for="el-kelamin" class="form-label">Jenis Kelamin</label>
-        <select class="form-select" name="el-kelamin[]" aria-label="Pilih jenis kelamin">
+        <label for="jenis-kelamin" class="form-label">Jenis Kelamin</label>
+        <select class="form-select" name="jenis-kelamin[]" aria-label="Pilih jenis kelamin" required>
             <option selected>Pilih salah satu</option>
             <option value="Laki-laki">Laki-laki</option>
             <option value="Perempuan">Perempuan</option>
         </select>
     </div>
     <div class="col-12 mb-3">
-        <label for="el-goldarah" class="form-label">Golongan Darah</label>
-        <select class="form-select" name="el-goldarah[]" aria-label="Pilih golongan darah">
+        <label for="golongan-darah" class="form-label">Golongan Darah</label>
+        <select class="form-select" name="golongan-darah[]" aria-label="Pilih golongan darah">
             <option selected>Pilih salah satu</option>
             <option value="A">A</option>
             <option value="B">B</option>
@@ -57,106 +66,106 @@ draft = false
         </select>
     </div>
     <div class="col-12 mb-3">
-        <label for="el-status" class="form-label">Status</label>
-        <select class="form-select" name="el-status[]" aria-label="Pilih status">
+        <label for="status" class="form-label">Status</label>
+        <select class="form-select" name="status[]" aria-label="Pilih status" required>
             <option selected>Pilih salah satu</option>
             <option value="Lajang">Lajang</option>
             <option value="Menikah">Menikah</option>
         </select>
     </div>
     <div class="col-12 mb-3">
-        <label for="el-namapasangan" class="form-label">Nama Lengkap Pasangan (jika sudah Menikah)</label>
-        <input type="text" class="form-control" name="el-namapasangan">
+        <label for="nama-pasangan" class="form-label">Nama Lengkap Pasangan (jika sudah Menikah)</label>
+        <input type="text" class="form-control" name="nama-pasangan" />
     </div>
     <div class="col-12 mb-3">
-        <label for="el-alamat" class="form-label">Alamat</label>
-        <input type="text" class="form-control" name="el-alamat">
+        <label for="alamat" class="form-label">Alamat</label>
+        <input type="text" class="form-control" name="alamat" required />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-rt" class="form-label">RT</label>
-        <input type="text" class="form-control" name="el-rt">    
+        <label for="rt" class="form-label">RT</label>
+        <input type="text" class="form-control" name="rt" />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-rw" class="form-label">RW</label>
-        <input type="text" class="form-control" name="el-rw">    
+        <label for="rw" class="form-label">RW</label>
+        <input type="text" class="form-control" name="rw" />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-kelurahan" class="form-label">Kelurahan</label>
-        <input type="text" class="form-control" name="el-kelurahan">    
+        <label for="kelurahan" class="form-label">Kelurahan</label>
+        <input type="text" class="form-control" name="kelurahan" required />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-kecamatan" class="form-label">Kecamatan</label>
-        <input type="text" class="form-control" name="el-kecamatan">    
+        <label for="kecamatan" class="form-label">Kecamatan</label>
+        <input type="text" class="form-control" name="kecamatan" required />    
     </div>
     <div class="col-10 mb-3">
-        <label for="el-kotakab" class="form-label">Kota/Kabupaten</label>
-        <input type="text" class="form-control" name="el-kotakab">
+        <label for="kota-kabupaten" class="form-label">Kota/Kabupaten</label>
+        <input type="text" class="form-control" name="kota-kabupaten" required />
     </div>            
     <div class="col-2 mb-3">
-        <label for="el-kodepos" class="form-label">Kode Pos</label>
-        <input type="number" class="form-control" name="el-kodepos">
+        <label for="kode-pos" class="form-label">Kode Pos</label>
+        <input type="number" class="form-control" name="kode-pos" />
     </div>            
     <div class="col-6 mb-3">
-        <label for="el-provinsi" class="form-label">Provinsi</label>
-        <input type="text" class="form-control" name="el-provinsi">    
+        <label for="provinsi" class="form-label">Provinsi</label>
+        <input type="text" class="form-control" name="provinsi" required />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-negara" class="form-label">Negara</label>
-        <input type="text" class="form-control" name="el-negara">    
+        <label for="negara" class="form-label">Negara</label>
+        <input type="text" class="form-control" name="negara" value="Indonesia" readonly />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-phone" class="form-label">Telp/HP</label>
+        <label for="no-hp" class="form-label">Telp/HP</label>
         <div class="input-group mb-3">
             <span class="input-group-text" id="el-adphone">+62</span>
-            <input type="text" class="form-control" name="el-phone" aria-describedby="el-adphone">
+            <input type="text" class="form-control" name="no-hp" aria-describedby="el-adphone" required />
         </div>
     </div>
     <div class="col-6 mb-3">
-        <label for="el-whatsapp" class="form-label">WhatsApp</label>
+        <label for="whatsapp" class="form-label">WhatsApp</label>
         <div class="input-group mb-3">
             <span class="input-group-text" id="el-adwhatsapp">+62</span>
-            <input type="text" class="form-control" name="el-whatsapp" aria-describedby="el-adwhatsapp">
+            <input type="text" class="form-control" name="whatsapp" aria-describedby="el-adwhatsapp" />
         </div>
     </div>
     <div class="col-12 mb-3">
-        <label for="el-email" class="form-label">Email</label>
-        <input type="text" class="form-control" name="el-email">    
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" name="email" />    
     </div>
     <div class="col-12 mb-3">
-        <label for="el-pekerjaan" class="form-label">Pekerjaan</label>
-        <input type="text" class="form-control" name="el-pekerjaan">    
+        <label for="pekerjaan" class="form-label">Pekerjaan</label>
+        <input type="text" class="form-control" name="pekerjaan" required />    
     </div>
     <div class="col-12 mb-3">
-        <label for="el-pendidikan" class="form-label">Pendidikan Terakhir</label>
-        <input type="text" class="form-control" name="el-pendidikan">    
+        <label for="pendidikan-terakhir" class="form-label">Pendidikan Terakhir</label>
+        <input type="text" class="form-control" name="pendidikan-terakhir" required />    
     </div>
     <div class="col-12 mb-3">
-        <label for="el-ketrampilan" class="form-label">Ketrampilan</label>
-        <input type="text" class="form-control" name="el-ketrampilan">    
+        <label for="ketrampilan" class="form-label">Ketrampilan</label>
+        <input type="text" class="form-control" name="ketrampilan" />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-baptisan" class="form-label">Baptis Selam</label>
-        <select class="form-select" name="el-baptisan[]" aria-label="Pilih status">
+        <label for="baptis-selam" class="form-label">Baptis Selam</label>
+        <select class="form-select" name="baptis-selam[]" aria-label="Pilih status" required>
             <option selected>Pilih salah satu</option>
             <option value="Belum">Belum</option>
             <option value="Sudah">Sudah</option>
         </select>
     </div>
     <div class="col-6 mb-3">
-        <label for="el-tglbaptis" class="form-label">Tanggal Baptis (jika Sudah)</label>
-        <input type="date" class="form-control" name="el-tglbaptis">
+        <label for="tanggal-baptis" class="form-label">Tanggal Baptis (jika Sudah)</label>
+        <input type="date" class="form-control" name="tanggal-baptis" />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-somkom" class="form-label">SOM/KOM</label>
-        <select class="form-select" name="el-somkom[]" aria-label="Pilih status">
+        <label for="som-kom" class="form-label">SOM/KOM</label>
+        <select class="form-select" name="som-kom[]" aria-label="Pilih status">
             <option selected>Pilih salah satu</option>
             <option value="Belum">Belum</option>
             <option value="Sudah">Sudah</option>
         </select>
     </div>
     <div class="col-6 mb-3">
-        <label for="el-keanggotaan" class="form-label">Jenis Keanggotaan</label>
-        <select class="form-select" name="el-keanggotaan[]" aria-label="Pilih status">
+        <label for="jenis-keanggotaan" class="form-label">Jenis Keanggotaan</label>
+        <select class="form-select" name="jenis-keanggotaan[]" aria-label="Pilih status" required>
             <option selected>Pilih salah satu</option>
             <option value="Dewasa">Dewasa</option>
             <option value="Anak">Anak</option>

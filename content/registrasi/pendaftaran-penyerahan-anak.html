@@ -6,66 +6,75 @@ layout = "default"
 draft = false
 +++
 
-<form class="row g-3" name="penyerahan-anak" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form 
+    class="row g-3" 
+    action="/sukses" 
+    name="penyerahan-anak" 
+    method="POST" 
+    data-netlify="true" 
+    netlify-honeypot="bot-field" 
+    class="needs-validation" 
+    novalidate
+    >
     <div class="hidden col-12">
         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
     </div>
     <div class="col-12 mb-3">
-        <label for="el-namalengkap" class="form-label">Nama Lengkap Anak (sesuai Akta Lahir)</label>
-        <input type="text" class="form-control" name="el-namalengkap">
+        <label for="nama-lengkap-anak" class="form-label">Nama Lengkap Anak (sesuai Akta Lahir)</label>
+        <input type="text" class="form-control" name="nama-lengkap-anak" required />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-tempatlahir" class="form-label">Tempat Lahir</label>
-        <input type="text" class="form-control" name="el-tempatlahir">
+        <label for="tempat-lahir" class="form-label">Tempat Lahir</label>
+        <input type="text" class="form-control" name="tempat-lahir" required />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-tgllahir" class="form-label">Tanggal Lahir</label>
-        <input type="date" class="form-control" name="el-tgllahir">
+        <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
+        <input type="date" class="form-control" name="tanggal-lahir" required />
     </div>
     <div class="col-12 mb-3">
-        <label for="el-kelamin" class="form-label">Jenis Kelamin</label>
-        <select class="form-select" name="el-kelamin[]" aria-label="Pilih jenis kelamin">
+        <label for="jenis-kelamin" class="form-label">Jenis Kelamin</label>
+        <select class="form-select" name="jenis-kelamin[]" aria-label="Pilih jenis kelamin" required>
             <option selected>Pilih salah satu</option>
             <option value="Laki-laki">Laki-laki</option>
             <option value="Perempuan">Perempuan</option>
         </select>
     </div>
     <div class="col-6 mb-3">
-        <label for="el-namabapak" class="form-label">Nama Ayah (sesuai Akta Lahir)</label>
-        <input type="text" class="form-control" name="el-namabapak">    
+        <label for="nama-ayah" class="form-label">Nama Ayah (sesuai Akta Lahir)</label>
+        <input type="text" class="form-control" name="nama=ayah" required />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-najbapak" class="form-label">NAJ Ayah (11 digit)</label>
-        <input type="number" class="form-control" name="el-najbapak">    
+        <label for="naj-ayah" class="form-label">NAJ Ayah (11 digit)</label>
+        <input type="number" class="form-control" name="naj-ayah" minlength="11" />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-namaibu" class="form-label">Nama Ibu (sesuai Akta Lahir)</label>
-        <input type="text" class="form-control" name="el-namaibu">    
+        <label for="nama-ibu" class="form-label">Nama Ibu (sesuai Akta Lahir)</label>
+        <input type="text" class="form-control" name="nama-ibu" required />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-najibu" class="form-label">NAJ Ibu (11 digit)</label>
-        <input type="number" class="form-control" name="el-najibu">    
+        <label for="naj-ibu" class="form-label">NAJ Ibu (11 digit)</label>
+        <input type="number" class="form-control" name="naj-ibu" minlength="11" />    
     </div>
     <div class="col-6 mb-3">
-        <label for="el-haridiserahkan" class="form-label">Hari Penyerahan Anak</label>
-        <input type="text" class="form-control" name="el-haridiserahkan">
+        <label for="hari-penyerahan-anak" class="form-label">Hari Penyerahan Anak</label>
+        <input type="text" class="form-control" name="hari-penyerahan-anak" required />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-tgldiserahkan" class="form-label">Tanggal Penyerahan Anak</label>
-        <input type="date" class="form-control" name="el-tgldiserahkan">
+        <label for="tanggal-penyerahan-anak" class="form-label">Tanggal Penyerahan Anak</label>
+        <input type="date" class="form-control" name="tanggal-penyerahan-anak" required />
     </div>
     <div class="col-6 mb-3">
-        <label for="el-phone" class="form-label">Telp/HP</label>
+        <label for="no-hp" class="form-label">Telp/HP</label>
         <div class="input-group mb-3">
             <span class="input-group-text" id="el-adphone">+62</span>
-            <input type="text" class="form-control" name="el-phone" aria-describedby="el-adphone">
+            <input type="text" class="form-control" name="no-phone" aria-describedby="el-adphone" required />
         </div>
     </div>
     <div class="col-6 mb-3">
-        <label for="el-whatsapp" class="form-label">WhatsApp</label>
+        <label for="whatsapp" class="form-label">WhatsApp</label>
         <div class="input-group mb-3">
             <span class="input-group-text" id="el-adwhatsapp">+62</span>
-            <input type="text" class="form-control" name="el-whatsapp" aria-describedby="el-adwhatsapp">
+            <input type="text" class="form-control" name="whatsapp" aria-describedby="el-adwhatsapp" />
         </div>
     </div>
     <div class="col-12">
