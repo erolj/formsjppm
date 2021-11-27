@@ -61,18 +61,6 @@ draft = false
                 <label for="golongan-darah" class="form-label">Golongan Darah</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <select class="form-select" name="status[]" aria-label="Pilih status" required>
-                    <option selected>Pilih salah satu</option>
-                    <option value="Lajang">Lajang</option>
-                    <option value="Menikah">Menikah</option>
-                </select>
-                <label for="status" class="form-label">Status</label>
-            </div>
-            <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <input type="text" class="form-control" name="nama-pasangan" placeholder="nama-pasangan" />
-                <label for="nama-pasangan" class="form-label">Nama Lengkap Pasangan (jika sudah Menikah)</label>
-            </div>
-            <div class="form-floating col-md-6 col-sm-12 mb-3">
                 <input type="date" class="form-control" name="tanggal-bergabung" placeholder="tanggal-bergabung" required />
                 <label for="tanggal-bergabung" class="form-label">Tanggal Bergabung</label>
             </div>
@@ -175,21 +163,44 @@ draft = false
     </fieldset>
     <hr />
     <fieldset>
+        <legend>Data Pernikahan</legend>
+        <div class="row">
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <select class="form-select" name="status[]" aria-label="Pilih status" required>
+                    <option value="Belum Menikah" selected>Belum Menikah</option>
+                    <option value="Menikah">Menikah</option>
+                    <option value="Janda/Duda Meninggal">Janda/Duda Meninggal</option>
+                    <option value="Janda/Duda Cerai">Janda/Duda Cerai</option>
+                </select>
+                <label for="status" class="form-label">Status</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="date" class="form-control" name="tanggal-pemberkatan" placeholder="tanggal-pemberkatan" />
+                <label for="tanggal-pemberkatan" class="form-label">Tanggal Pemberkatan (jika Menikah)</label>
+            </div>
+            <div class="form-floating col-12 mb-3">
+                <input type="text" class="form-control" name="nama-pasangan" placeholder="nama-pasangan" />
+                <label for="nama-pasangan" class="form-label">Nama Lengkap Pasangan (jika Menikah)</label>
+            </div>
+        </div>
+    </fieldset>
+    <hr />
+    <fieldset>
         <legend>Emergency Contact</legend>
         <div class="row">
             <p class="col-12">
                 Kontak yang akan dihubungi saat keadaan darurat.
             </p>
             <div class="form-floating col-12 mb-3">
-                <input type="text" class="form-control" name="emergency-kontak" placeholder="emergency-kontak" />    
+                <input type="text" class="form-control" name="emergency-kontak" placeholder="emergency-kontak" required />    
                 <label for="emergency-kontak" class="form-label">Nama</label>
             </div>
             <div class="form-floating col-12 mb-3">
-                <input type="text" class="form-control" name="emergency-alamat" placeholder="emergency-alamat" />    
+                <input type="text" class="form-control" name="emergency-alamat" placeholder="emergency-alamat" required />    
                 <label for="emergency-alamat" class="form-label">Alamat</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <input type="text" class="form-control" name="emergency-hp" placeholder="emergency-hp" />    
+                <input type="text" class="form-control" name="emergency-hp" placeholder="emergency-hp" required />    
                 <label for="emergency-hp" class="form-label">No Telp/HP</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
@@ -209,7 +220,21 @@ draft = false
             </div>
         </div>
     </fieldset>
-    <div class="col-12 d-flex justify-content-center">
-        <button class="btn btn-primary btn-lg" type="submit">Kirim</button>
+    <hr />
+    <div class="row">
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="data-sudah-benar">
+                <label class="form-check-label" for="data-sudah-benar">
+                    Saya menyatakan data diatas adalah benar.
+                </label>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <button class="btn btn-primary btn-lg" type="submit">Kirim</button>
+        </div>
     </div>
 </form>
