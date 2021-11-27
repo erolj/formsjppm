@@ -1,5 +1,5 @@
 +++
-title = "Pendaftaran Jemaat"
+title = "Pendaftaran Jemaat (Anak)"
 date = 2021-11-26T03:01:01+08:00
 type = "page"
 layout = "default"
@@ -20,7 +20,7 @@ draft = false
         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
     </div>
     <fieldset>
-        <legend>Data Pribadi</legend>
+        <legend>Data Anak</legend>
         <div class="row">
             <div class="form-floating col-12 mb-3">
                 <input type="text" class="form-control" name="nama-lengkap" placeholder="nama-lengkap" required />
@@ -31,8 +31,8 @@ draft = false
                 <label for="nama-panggilan" class="form-label">Nama Panggilan</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <input type="text" class="form-control" name="nama-baptis" placeholder="nama-baptis" />
-                <label for="nama-baptis" class="form-label">Nama Baptis (jika ada)</label>
+                <input type="text" class="form-control" name="no-ktp" placeholder="no-ktp" />
+                <label for="no-ktp" class="form-label">No KIA (Kartu Identitas Anak)</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
                 <input type="text" class="form-control" name="tempat-lahir" placeholder="tempat-lahir" required />
@@ -41,6 +41,10 @@ draft = false
             <div class="form-floating col-md-6 col-sm-12 mb-3">
                 <input type="date" class="form-control" name="tanggal-lahir" placeholder="tanggal-lahir" required />
                 <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="text" class="form-control" name="status-dalam-keluarga" placeholder="status-dalam-keluarga" value="Anak" readonly />
+                <label for="status-dalam-keluarga" class="form-label">Status Dalam Keluarga</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
                 <select class="form-select" name="jenis-kelamin[]" aria-label="Pilih jenis kelamin" required>
@@ -62,11 +66,15 @@ draft = false
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
                 <input type="date" class="form-control" name="tanggal-bergabung" placeholder="tanggal-bergabung" required />
-                <label for="tanggal-bergabung" class="form-label">Tanggal Bergabung</label>
+                <label for="tanggal-bergabung" class="form-label">Tanggal Bergabung (isi tanggal sekarang)</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <input type="text" class="form-control" name="no-ktp" placeholder="no-ktp" required />
-                <label for="no-ktp" class="form-label">No KTP</label>
+                <input type="text" class="form-control" name="nama-ayah" placeholder="nama-ayah" required />
+                <label for="nama-ayah" class="form-label">Nama Ayah</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="text" class="form-control" name="nama-ibu" placeholder="nama-ibu" required />
+                <label for="nama-ibu" class="form-label">Nama Ibu</label>
             </div>
             <div class="form-floating col-md-8 col-sm-12 mb-3">
                 <input type="text" class="form-control" name="alamat" placeholder="alamat" required />
@@ -105,7 +113,7 @@ draft = false
                 <label for="negara" class="form-label">Negara</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <input type="text" class="form-control" name="no-hp" placeholder="no-hp" required />
+                <input type="text" class="form-control" name="no-hp" placeholder="no-hp" />
                 <label for="no-hp" class="form-label">No Telp/HP</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
@@ -113,15 +121,7 @@ draft = false
                 <label for="whatsapp" class="form-label">No WhatsApp</label>
             </div>
             <div class="form-floating col-12 mb-3">
-                <input type="email" class="form-control" name="email" placeholder="email" />    
-                <label for="email" class="form-label">Email</label>
-            </div>
-            <div class="form-floating col-12 mb-3">
-                <input type="text" class="form-control" name="pekerjaan" placeholder="pekerjaan" required />    
-                <label for="pekerjaan" class="form-label">Pekerjaan</label>
-            </div>
-            <div class="form-floating col-12 mb-3">
-                <input type="text" class="form-control" name="pendidikan-terakhir" placeholder="pendidikan-terakhir" required />    
+                <input type="text" class="form-control" name="pendidikan-terakhir" placeholder="pendidikan-terakhir" />    
                 <label for="pendidikan-terakhir" class="form-label">Pendidikan Terakhir</label>
             </div>
             <div class="form-floating col-12 mb-3">
@@ -129,9 +129,19 @@ draft = false
                 <label for="ketrampilan" class="form-label">Ketrampilan</label>
             </div>
             <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <select class="form-select" name="penyerahan-anak[]" aria-label="Pilih status" required>
+                    <option value="Belum" selected>Belum</option>
+                    <option value="Sudah">Sudah</option>
+                </select>
+                <label for="penyerahan-anak" class="form-label">Penyerahan Anak</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
+                <input type="date" class="form-control" name="tanggal-penyerahan-anak" placeholder="tanggal-penyerahan-anak" />
+                <label for="tanggal-penyerahan-anak" class="form-label">Tanggal Penyerahan Anak (jika Sudah)</label>
+            </div>
+            <div class="form-floating col-md-6 col-sm-12 mb-3">
                 <select class="form-select" name="baptis-selam[]" aria-label="Pilih status" required>
-                    <option selected>Pilih salah satu</option>
-                    <option value="Belum">Belum</option>
+                    <option value="Belum" selected>Belum</option>
                     <option value="Sudah">Sudah</option>
                 </select>
                 <label for="baptis-selam" class="form-label">Baptis Selam</label>
@@ -139,47 +149,6 @@ draft = false
             <div class="form-floating col-md-6 col-sm-12 mb-3">
                 <input type="date" class="form-control" name="tanggal-baptis" placeholder="tanggal-baptis" />
                 <label for="tanggal-baptis" class="form-label">Tanggal Baptis (jika Sudah)</label>
-            </div>
-            <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <select class="form-select" name="som-kom[]" aria-label="Pilih status">
-                    <option selected>Pilih salah satu</option>
-                    <option value="Belum">Belum</option>
-                    <option value="SOM 1/KOM 100">SOM 1/KOM 100</option>
-                    <option value="SOM 2/KOM 200">SOM 2/KOM 200</option>
-                    <option value="SOM 3/KOM 300">SOM 3/KOM 300</option>
-                    <option value="SOM 4/KOM 400">SOM 4/KOM 400</option>
-                </select>
-                <label for="som-kom" class="form-label">SOM/KOM</label>
-            </div>
-            <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <select class="form-select" name="status-dalam-keluarga[]" aria-label="Pilih status" required>
-                    <option value="Orang Tua" selected>Orang Tua</option>
-                    <option value="Anak">Anak</option>
-                </select>
-                <label for="status-dalam-keluarga" class="form-label">Status Dalam Keluarga</label>
-            </div>
-        </div>
-    </fieldset>
-    <hr />
-    <fieldset>
-        <legend>Data Pernikahan</legend>
-        <div class="row">
-            <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <select class="form-select" name="status[]" aria-label="Pilih status" required>
-                    <option value="Belum Menikah" selected>Belum Menikah</option>
-                    <option value="Menikah">Menikah</option>
-                    <option value="Janda/Duda Meninggal">Janda/Duda Meninggal</option>
-                    <option value="Janda/Duda Cerai">Janda/Duda Cerai</option>
-                </select>
-                <label for="status" class="form-label">Status</label>
-            </div>
-            <div class="form-floating col-md-6 col-sm-12 mb-3">
-                <input type="date" class="form-control" name="tanggal-pemberkatan" placeholder="tanggal-pemberkatan" />
-                <label for="tanggal-pemberkatan" class="form-label">Tanggal Pemberkatan (jika Menikah)</label>
-            </div>
-            <div class="form-floating col-12 mb-3">
-                <input type="text" class="form-control" name="nama-pasangan" placeholder="nama-pasangan" />
-                <label for="nama-pasangan" class="form-label">Nama Lengkap Pasangan (jika Menikah)</label>
             </div>
         </div>
     </fieldset>
@@ -210,6 +179,7 @@ draft = false
                 <select class="form-select" name="emergency-hubungan[]" aria-label="Pilih hubungan" required>
                     <option selected>Pilih salah satu</option>
                     <option value="Orang Tua">Orang Tua</option>
+                    <option value="Suami/Istri">Suami/Istri</option>
                     <option value="Anak">Anak</option>
                     <option value="Saudara">Saudara</option>
                     <option value="Kerabat">Kerabat</option>
