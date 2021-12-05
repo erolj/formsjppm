@@ -1,11 +1,12 @@
 {{ define "main" }}
-<div class="row">
+<div class="row justify-content-center">
   {{ range where .Paginator.Pages ".Layout" "==" "default" }}
   <div class="col-md-3 col-sm-12 mb-4">
     <div class="card text-center shadow-sm">
       <div class="card-body">
         <figure class="card-icon">
-          <img src="{{ .Params.Img }}" alt="Icon {{ .Title }}">
+          {{ $img := resources.Get .Params.img }}
+          <img src="{{ $img.Permalink }}" alt="Icon {{ .Title }}">
         </figure>
         <a href="{{ .Permalink }}" class="stretched-link text-decoration-none">
           <h2 class="card-title card-title-home">{{ .Title }}</h2>
